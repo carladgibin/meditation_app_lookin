@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @meditation.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @meditation.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @meditation.image_url %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @meditation.category %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @meditation.price %>
+</p>
+
+<%= link_to 'Edit', edit_meditation_path(@meditation) %> |
+<%= link_to 'Back', meditations_path %>
