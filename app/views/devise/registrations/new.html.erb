@@ -1,29 +1,60 @@
-<h2>Sign up</h2>
+<div class="header">
+  <div class="sticky">
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "lookin-logo.png" %>
+      <% end %>
+    </div>
 
+    <div class="user">
+      <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%= link_to 'Sign up', new_user_registration_path, :class => "button" %>
+
+      <%= link_to 'Sign in', new_user_session_path, :class => "button" %>
+      <% end %>
+    </div>
+  </div>
+
+<div class="forms" align="center">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "in-field" %>
   </div>
-
+  <br />
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", :class => "in-field" %>
   </div>
-
+  <br />
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "in-field" %>
   </div>
-
+  <br />
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => "button" %>
   </div>
 <% end %>
-
+  <br />
 <%= render "devise/shared/links" %>
+</div>
+
+  <div class="footerWrap">
+    <div class="footer">
+      <div class="footerContent">
+        <hr><br>
+        <p>2019 All the rights reserved to Lookin Meditation</p>
+      </div>     
+    </div>
+  </div>
+
+
+</div>

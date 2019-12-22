@@ -13,3 +13,221 @@
  *= require_tree .
  *= require_self
  */
+
+ /*!
+ * Start Bootstrap - Landing Page v5.0.7 (https://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+/* colour scheme */
+/* font weights */
+/* breakpoints */
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #565656;
+  background: #fefefe;
+  scroll-behavior: smooth; }
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  color: #6d7278;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin-bottom: 2.5rem; }
+  h2:after {
+    content: '';
+    width: 40px;
+    height: 5px;
+    display: block;
+    margin: 0.75rem auto 0;
+    background: #AB78B3; }
+
+th, td {
+  padding: 15px;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.forms {
+  position: relative;
+  top: 150px;
+}
+
+.forms textarea {
+  background-color: white;
+}
+
+.in-field {
+  width: 50%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: @grey-lightest;
+  border: 1px solid @grey;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 90px;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.user {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.button {
+  background-color: #0066B3;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #AB78B3;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.bigger-btn {
+  background-color: #AB78B3;
+  border: none;
+  color: white;
+  padding: 90px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 50px;
+}
+
+.parentabout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  padding: 50px;
+}
+
+.parenthome {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  padding: 50px;
+}
+
+.parent_tom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 50px;
+  position: relative;
+  top: 30px;
+}
+
+.bg-purple {
+    background-color: 
+    rgba(171, 120, 179, 0.5) !important;
+}
+
+.footerWrap {
+    width:100%;
+    position:fixed;
+    bottom: 0px;
+}
+.footer {
+    width:400px;
+    margin:auto;
+}
+.footerContent {
+    float:left;
+    width:100%;
+    padding:20px 0;
+}
+.footer p {float:left; width:100%; text-align:center; 
+}
+
+hr.new1 {
+  border-top: 0.5px solid #CCCCCC;
+}
+
+.add_meditation {
+  position: relative;
+  top: 100px;
+  padding: 50px;
+}
+
+.form {
+  display: block;
+  width: 50%;
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1.1rem;
+  font-size: 1.063rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #898989;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}

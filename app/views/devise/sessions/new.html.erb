@@ -1,14 +1,32 @@
-<h2>Log in</h2>
+<div class="header">
+  <div class="sticky">
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "lookin-logo.png" %>
+      <% end %>
+    </div>
 
+    <div class="user">
+      <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "button" %>
+      <% else %>
+      <%= link_to 'Sign up', new_user_registration_path, :class => "button" %>
+
+      <%= link_to 'Sign in', new_user_session_path, :class => "button" %>
+      <% end %>
+    </div>
+  </div>
+
+<div class="forms" align="center">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "in-field"  %>
   </div>
-
+  <br />
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", :class => "in-field" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -17,10 +35,23 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
+  <br />
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :class => "button" %>
   </div>
 <% end %>
-
+  <br />
 <%= render "devise/shared/links" %>
+</div>
+
+  <div class="footerWrap">
+    <div class="footer">
+      <div class="footerContent">
+        <hr><br>
+        <p>2019 All the rights reserved to Lookin Meditation</p>
+      </div>     
+    </div>
+  </div>
+
+
+</div>

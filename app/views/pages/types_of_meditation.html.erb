@@ -1,0 +1,41 @@
+<div class="header">
+	<div class="sticky">
+		<div class="logo">
+			<%= link_to root_path do %>
+				<%= image_tag "lookin-logo.png" %>
+			<% end %>
+		</div>
+
+		<div class="user">
+			<% if current_user %>
+			<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+			<% else %>
+			<%= link_to 'Sign up', new_user_registration_path, :class => "button" %>
+
+			<%= link_to 'Sign in', new_user_session_path, :class => "button" %>
+			<% end %>
+		</div>
+	</div>
+
+	<div class="parentabout">
+		<h2>Types of Meditation</h2>
+		<p align="center">Our App provides 4 types of meditation specially developed to help you to heal your life.</p>
+		<div class="parent_tom" align="center">
+			<p><%= image_tag "icon-inner-peace.png" %><br><br><strong>Inner peace</strong><br><br>Mindfulness meditation, helps to relief stress and release control</p>
+			<p><%= image_tag "icon-love.png" %><br><br><strong>Love</strong><br><br>Helps to improve relationships, increase self-love and to attract a soulmate</p>
+			<p><%= image_tag "icon-confidence.svg" %><br><br><strong>Confidence</strong><br><br>Connect to your inner-self, develop more sense of security and feel enough</p>
+			<p><%= image_tag "icon-yin-yang.svg" %><br><br><strong>Yin & Yang</strong><br><br>Promotes balance, helps on the kundalini awakening process and to connect with your higher-self</p>
+		</div>
+	</div>
+
+	<div class="footerWrap">
+    <div class="footer">
+      <div class="footerContent">
+      	<hr><br>
+        <p>2019 All the rights reserved to Lookin Meditation</p>
+      </div>     
+    </div>
+	</div>
+
+</div>
+

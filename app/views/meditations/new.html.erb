@@ -1,5 +1,37 @@
-<h1>New Meditation</h1>
+<div class="header">
+	<div class="sticky">
+		<div class="logo">
+			<%= link_to root_path do %>
+				<%= image_tag "lookin-logo.png" %>
+			<% end %>
+		</div>
+
+		<div class="user">
+			<% if current_user %>
+			<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+			<% else %>
+			<%= link_to 'Sign up', new_user_registration_path, :class => "button" %>
+
+			<%= link_to 'Sign in', new_user_session_path, :class => "button" %>
+			<% end %>
+		</div>
+	</div>
+
+<div class="add_meditation" align="center">
+<h2>New Meditation</h2>
 
 <%= render 'form', meditation: @meditation %>
 
 <%= link_to 'Back', meditations_path %>
+</div>
+
+	<div class="footerWrap">
+    <div class="footer">
+      <div class="footerContent">
+      	<hr><br>
+        <p>2019 All the rights reserved to Lookin Meditation</p>
+      </div>     
+    </div>
+	</div>
+
+</div>

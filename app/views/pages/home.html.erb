@@ -1,10 +1,40 @@
-<h1>Pages#home</h1>
+<div class="header">
+	<div class="sticky">
+		<div class="logo">
+			<%= link_to root_path do %>
+				<%= image_tag "lookin-logo.png" %>
+			<% end %>
+		</div>
 
-<% if current_user %>
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-<% else %>
-<%= link_to 'Sign up', new_user_registration_path %>
+		<div class="user">
+			<% if current_user %>
+			<%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "button"  %>
+			<% else %>
+			<%= link_to 'Sign up', new_user_registration_path, :class => "button" %>
 
-<%= link_to 'Sign in', new_user_session_path %>
-<% end %>
+			<%= link_to 'Sign in', new_user_session_path, :class => "button" %>
+			<% end %>
+		</div>
+	</div>
 
+	<div class="parenthome">
+		<h2>Explore Meditation</h2>
+	</div>
+
+	<div class="parent" align="center">
+		<%= link_to 'About Us', 'pages/about', :class => "bigger-btn" %>
+		<%= link_to 'Discover Meditation', 'pages/discover_meditation', :class => "bigger-btn" %>
+		<%= link_to 'Types of Meditation', 'pages/types_of_meditation', :class => "bigger-btn" %>
+		<%= link_to 'Contact Us', @contact, :class => "bigger-btn" %>
+	</div>
+
+	<div class="footerWrap">
+    <div class="footer">
+      <div class="footerContent">
+      	<hr class="new1"><br>
+        <p>2019 All the rights reserved to Lookin Meditation</p>
+      </div>     
+    </div>
+	</div>
+
+</div>

@@ -1,6 +1,27 @@
+<div class="header">
+  <div class="sticky">
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "lookin-logo.png" %>
+      <% end %>
+    </div>
+
+    <div class="user">
+      <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%= link_to 'Sign up', new_user_registration_path, :class => "button" %>
+
+      <%= link_to 'Sign in', new_user_session_path, :class => "button" %>
+      <% end %>
+    </div>
+  </div>
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Meditations</h1>
+<div class="add_meditation">
+<h2>Meditations</h2>
 
 <table>
   <thead>
@@ -22,9 +43,9 @@
         <td><%= meditation.image_url %></td>
         <td><%= meditation.category %></td>
         <td><%= meditation.price %></td>
-        <td><%= link_to 'Show', meditation %></td>
-        <td><%= link_to 'Edit', edit_meditation_path(meditation) %></td>
-        <td><%= link_to 'Destroy', meditation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', meditation, :class => "button2" %></td>
+        <td><%= link_to 'Edit', edit_meditation_path(meditation), :class => "button2" %></td>
+        <td><%= link_to 'Destroy', meditation, :class => "button2", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +53,16 @@
 
 <br>
 
-<%= link_to 'New Meditation', new_meditation_path %>
+<%= link_to 'New Meditation', new_meditation_path, :class => "button" %>
+</div>
+
+  <div class="footerWrap">
+    <div class="footer">
+      <div class="footerContent">
+        <hr><br>
+        <p>2019 All the rights reserved to Lookin Meditation</p>
+      </div>     
+    </div>
+  </div>
+
+</div>
